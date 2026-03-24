@@ -1,5 +1,5 @@
 ﻿CuentaBancaria cuenta = 
-    new CuentaBancaria(1000, "123456");
+    new CuentaBancaria("123456", 1000);
 
 Transaccion[] transacciones = new Transaccion[4];
 

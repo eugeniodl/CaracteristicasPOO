@@ -1,33 +1,38 @@
-﻿class CuentaBancaria
+﻿public class CuentaBancaria
 {
     private decimal _saldo;
-    private string? _numeroCuenta;
 
-    public CuentaBancaria(decimal saldo, string? numeroCuenta)
+    public string NumeroCuenta { get; }
+
+    public decimal Saldo
     {
-        Saldo = saldo;
+        get { return _saldo; }
+    }
+
+    public CuentaBancaria(string numeroCuenta, decimal saldoInicial)
+    {
         NumeroCuenta = numeroCuenta;
+        _saldo = saldoInicial;
     }
 
     public void Depositar(decimal monto)
     {
         if (monto > 0)
         {
-            Saldo += monto;
+            _saldo += monto;
             Console.WriteLine($"Depósito: {monto:C}");
         }
         else
         {
-            Console.WriteLine("Monto inválido para depósito");
+            Console.WriteLine("Monto inválido para depósito.");
         }
-            
     }
 
     public void Retirar(decimal monto)
     {
-        if(monto > 0 && monto <= Saldo)
+        if (monto > 0 && monto <= _saldo)
         {
-            Saldo -= monto;
+            _saldo -= monto;
             Console.WriteLine($"Retiro: {monto:C}");
         }
         else
@@ -35,9 +40,6 @@
             Console.WriteLine("Fondos insuficientes o monto inválido.");
         }
     }
-
-    public decimal Saldo { get => _saldo; set => _saldo = value; }
-    public string? NumeroCuenta { get => _numeroCuenta; set => _numeroCuenta = value; }
 }
 
 
