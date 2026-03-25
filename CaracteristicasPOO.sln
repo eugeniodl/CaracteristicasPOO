@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36310.24 d17.14
+VisualStudioVersion = 17.14.36310.24
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BancoApp", "BancoApp\BancoApp.csproj", "{1197D451-B0D2-40B5-80F2-448B6F0A1AB0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaBancarioApp", "SistemaBancarioApp\SistemaBancarioApp.csproj", "{47A16F67-36A5-8227-F6A0-F88C93079EDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaAcademico", "SistemaAcademico\SistemaAcademico.csproj", "{F3A68FFD-C7F3-9863-6D18-0E1BB6D06F73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1197D451-B0D2-40B5-80F2-448B6F0A1AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1197D451-B0D2-40B5-80F2-448B6F0A1AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1197D451-B0D2-40B5-80F2-448B6F0A1AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1197D451-B0D2-40B5-80F2-448B6F0A1AB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47A16F67-36A5-8227-F6A0-F88C93079EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47A16F67-36A5-8227-F6A0-F88C93079EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47A16F67-36A5-8227-F6A0-F88C93079EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47A16F67-36A5-8227-F6A0-F88C93079EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3A68FFD-C7F3-9863-6D18-0E1BB6D06F73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3A68FFD-C7F3-9863-6D18-0E1BB6D06F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3A68FFD-C7F3-9863-6D18-0E1BB6D06F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3A68FFD-C7F3-9863-6D18-0E1BB6D06F73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
