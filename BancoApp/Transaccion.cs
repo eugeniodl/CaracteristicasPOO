@@ -1,4 +1,4 @@
-﻿abstract class Transaccion
+﻿public abstract class Transaccion
 {
     protected CuentaBancaria? cuenta;
     protected decimal monto;

@@ -1,12 +1,12 @@
-﻿class CuentaBancaria
+﻿public class CuentaBancaria
 {
-    private decimal _saldo;
     private string? _numeroCuenta;
+    private decimal _saldo;
 
-    public CuentaBancaria(decimal saldo, string? numeroCuenta)
+    public CuentaBancaria(string? numeroCuenta, decimal saldo)
     {
-        Saldo = saldo;
         NumeroCuenta = numeroCuenta;
+        Saldo = saldo;
     }
 
     public void Depositar(decimal monto)
@@ -36,8 +36,8 @@
         }
     }
 
-    public decimal Saldo { get => _saldo; set => _saldo = value; }
     public string? NumeroCuenta { get => _numeroCuenta; set => _numeroCuenta = value; }
+    public decimal Saldo { get => _saldo; set => _saldo = value; }
 }
 
 

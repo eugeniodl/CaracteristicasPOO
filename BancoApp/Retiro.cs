@@ -1,4 +1,4 @@
-﻿class Retiro : Transaccion
+﻿public class Retiro : Transaccion
 {
     public Retiro(CuentaBancaria? cuenta, 
         decimal monto) : base(cuenta, monto)
