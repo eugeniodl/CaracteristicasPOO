@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BancoApp", "BancoApp\BancoA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaAcademico", "SistemaAcademico\SistemaAcademico.csproj", "{F3A68FFD-C7F3-9863-6D18-0E1BB6D06F73}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimerSistematico", "PrimerSistematico\PrimerSistematico.csproj", "{1D50F266-BD2C-E6FE-8D7A-9F94487DA602}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaTipoATM", "SistemaTipoATM\SistemaTipoATM.csproj", "{ACE97DB7-FB13-68CD-6346-76D2BC4999DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{F3A68FFD-C7F3-9863-6D18-0E1BB6D06F73}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3A68FFD-C7F3-9863-6D18-0E1BB6D06F73}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3A68FFD-C7F3-9863-6D18-0E1BB6D06F73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D50F266-BD2C-E6FE-8D7A-9F94487DA602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D50F266-BD2C-E6FE-8D7A-9F94487DA602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D50F266-BD2C-E6FE-8D7A-9F94487DA602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D50F266-BD2C-E6FE-8D7A-9F94487DA602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE97DB7-FB13-68CD-6346-76D2BC4999DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE97DB7-FB13-68CD-6346-76D2BC4999DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE97DB7-FB13-68CD-6346-76D2BC4999DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE97DB7-FB13-68CD-6346-76D2BC4999DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
