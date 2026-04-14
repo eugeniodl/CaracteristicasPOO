@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimerSistematico", "Primer
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cajero", "Cajero\Cajero.csproj", "{B20BAA1E-087E-D2A6-E91F-139F2B0DC976}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasoTermostato", "CasoTermostato\CasoTermostato.csproj", "{A293EF9C-469C-23F9-171C-03C08631B918}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{B20BAA1E-087E-D2A6-E91F-139F2B0DC976}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B20BAA1E-087E-D2A6-E91F-139F2B0DC976}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B20BAA1E-087E-D2A6-E91F-139F2B0DC976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A293EF9C-469C-23F9-171C-03C08631B918}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A293EF9C-469C-23F9-171C-03C08631B918}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A293EF9C-469C-23F9-171C-03C08631B918}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A293EF9C-469C-23F9-171C-03C08631B918}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
