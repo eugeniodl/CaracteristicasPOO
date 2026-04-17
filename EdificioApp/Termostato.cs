@@ -25,7 +25,7 @@ public class Termostato
 
     private double ValidarRango(double valor)
     {
-        if(valor < _temperaturaMinima)
+        if (valor < _temperaturaMinima)
         {
             Console.WriteLine($"[AVISO] {valor:F1}°C es demasiado bajo." +
                 $"Ajustando a mínimo {_temperaturaMinima}°C");
@@ -45,27 +45,77 @@ public class Termostato
         get => _temperaturaObjetivo;
     }
 
-    public double TemperaturaMinima { get  => _temperaturaMinima; }
-    public double TemperaturaMaxima { get  => _temperaturaMaxima; }
+    public double TemperaturaMinima { get => _temperaturaMinima; }
+    public double TemperaturaMaxima { get => _temperaturaMaxima; }
 
     public void SubirTemperatura()
     {
         ModificarTemperatura(_incrementoEstandar);
     }
 
+    public void BajarTemperatura()
+    {
+        ModificarTemperatura(-_incrementoEstandar);
+    }
+
     private void ModificarTemperatura(double delta)
     {
-        if(!PuedeModificar())
+        // 1. Verificar Rate Limiting (Protección simple del hardware)
+        if (!PuedeModificar())
         {
-
+            throw new InvalidOperationException(
+                $"Ha realizado demasiados cambios en {_ventanaTiempo.TotalSeconds} " +
+                $"segundos. Espere un momento antes de intentarlo de nuevo."
+                );
         }
+
+        // 2. Calcular el nuevo valor y validar rango
+        double nuevoValor = _temperaturaObjetivo + delta;
+        double valorValidado = ValidarRango(nuevoValor);
+
+        // 3. Si hay cambio real, aplicarlo
+        if (_temperaturaObjetivo != valorValidado)
+        {
+            _temperaturaObjetivo = valorValidado;
+            RegistrarCambio();
+            Console.WriteLine($"[OK] Nueva temperatura objetivo: " +
+                $"{_temperaturaObjetivo:F1}°C");
+            ActivarClimatizacion();
+        }
+        else
+        {
+            Console.WriteLine($"[INFO] Temperatura ya está en el límite " +
+                $"({_temperaturaObjetivo:F1}°C). Sin cambios.");
+        }
+    }
+
+    private void ActivarClimatizacion()
+    {
+        Console.WriteLine($" -> [HARDWARE] Activando sistema de climatización...");
+    }
+
+    private void RegistrarCambio()
+    {
+        DateTime ahora = DateTime.Now;
+
+        // Si ha pasado la ventana, reiniciamos el contador
+        if (ahora - _ultimoCambio > _ventanaTiempo)
+        {
+            _contadorCambios = 0;
+        }
+
+        _contadorCambios++;
+        _ultimoCambio = ahora;
+
+        Console.WriteLine($"[DEBUG] Cambios en esta ventana:" +
+            $" {_contadorCambios}/{_maxCambiosPorVentana}");
     }
 
     private bool PuedeModificar()
     {
         DateTime ahora = DateTime.Now;
 
-        if(ahora - _ultimoCambio > _ventanaTiempo)
+        if (ahora - _ultimoCambio > _ventanaTiempo)
         {
             _contadorCambios = 0;
         }
