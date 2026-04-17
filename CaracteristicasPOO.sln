@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DronApp", "DronApp\DronApp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EdificioApp", "EdificioApp\EdificioApp.csproj", "{4C044B4A-49D3-47B0-AAEF-CB254443268E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banco", "Banco\Banco.csproj", "{A28D1CC5-B6CD-4A5C-AF6B-6085BFC25D3C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{4C044B4A-49D3-47B0-AAEF-CB254443268E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C044B4A-49D3-47B0-AAEF-CB254443268E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C044B4A-49D3-47B0-AAEF-CB254443268E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A28D1CC5-B6CD-4A5C-AF6B-6085BFC25D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A28D1CC5-B6CD-4A5C-AF6B-6085BFC25D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A28D1CC5-B6CD-4A5C-AF6B-6085BFC25D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A28D1CC5-B6CD-4A5C-AF6B-6085BFC25D3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
