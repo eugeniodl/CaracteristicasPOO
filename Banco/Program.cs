@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿var cuenta = new CuentaPremium("ES-123-456");
+
+cuenta.AplicarBeneficioExclusivo();
+cuenta.Depositar(200);
+
+Console.WriteLine($"Saldo final: {cuenta.Saldo:C}");
