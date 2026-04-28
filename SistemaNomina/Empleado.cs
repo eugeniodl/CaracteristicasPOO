@@ -1,6 +1,4 @@
-﻿using System.Reflection.Metadata.Ecma335;
-
-/// <summary>
+﻿/// <summary>
 /// Clase base abstracta que define el contrato para 
 /// todos los empleados
 /// </summary>
