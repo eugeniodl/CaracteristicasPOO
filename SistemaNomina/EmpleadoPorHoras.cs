@@ -43,6 +43,23 @@
 
     public override decimal CalcularIngresos()
     {
-        throw new NotImplementedException();
+        const decimal HORAS_NORMALES = 40;
+        const decimal FACTOR_HORA_EXTRA = 2.0m;
+
+        if (HorasTrabajadas <= HORAS_NORMALES)
+            return SueldoPorHora * HorasTrabajadas;
+        else
+        {
+            decimal horasExtras = HorasTrabajadas - HORAS_NORMALES;
+            return (SueldoPorHora * HORAS_NORMALES) +
+                (SueldoPorHora * FACTOR_HORA_EXTRA * horasExtras);
+        }
     }
+
+    public override string ObtenerInformacion()
+    {
+        return $"Empleado por Horas: {NombreCompleto} | " +
+            $"${SueldoPorHora}/hora | {HorasTrabajadas} horas";
+    }
+
 }

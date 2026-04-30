@@ -29,7 +29,7 @@
         }
     }
 
-    protected string NombreCompleto => $"{Nombre} {Apellido}";
+    public string NombreCompleto => $"{Nombre} {Apellido}";
 
     protected Empleado(string nombre, string apellido)
     {
