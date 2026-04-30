@@ -22,7 +22,7 @@
         {
             if (value <= 0) throw new ArgumentException
              ("Las horas trabajadas no pueden ser negativas");
-            if (value > 730)
+            if (value > 744)
                 throw new ArgumentException
                  ("Horas exceden el límite mensual");
             _horasTrabajadas = value;
