@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dron", "Dron\Dron.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TercerSistematico", "TercerSistematico\TercerSistematico.csproj", "{8FA22E6A-6957-4A37-812A-D979F1537645}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaNomina", "SistemaNomina\SistemaNomina.csproj", "{FF179857-64F9-443A-90E7-BFF3030B1C56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8FA22E6A-6957-4A37-812A-D979F1537645}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FA22E6A-6957-4A37-812A-D979F1537645}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FA22E6A-6957-4A37-812A-D979F1537645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF179857-64F9-443A-90E7-BFF3030B1C56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF179857-64F9-443A-90E7-BFF3030B1C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF179857-64F9-443A-90E7-BFF3030B1C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF179857-64F9-443A-90E7-BFF3030B1C56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
