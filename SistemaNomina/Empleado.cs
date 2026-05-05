@@ -38,6 +38,17 @@ public abstract class Empleado
         Nombre = nombre;
         Apellido = apellido;
     }
+
+    protected Empleado(string nombreCompleto)
+        : this(nombreCompleto.Split(' ')[0] 
+              ?? "Sin", 
+              nombreCompleto.Contains(' ') == true ?
+              nombreCompleto.Substring
+              (nombreCompleto.IndexOf(' ') + 1) :
+              "Nombre")
+    {
+
+    }
     /// <summary>
     /// Método abstracto que cada subclase debe implementar
     /// obligatoriamente
