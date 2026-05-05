@@ -34,6 +34,19 @@
         VentasBrutas = ventasBrutas;
     }
 
+    public EmpleadoPorComision(string nombreCompleto, decimal tarifaComision,
+        decimal ventasBrutas) : base(nombreCompleto)
+    {
+        TarifaComision = tarifaComision;
+        VentasBrutas = ventasBrutas;
+    }
+
+    public EmpleadoPorComision(string nombre, string apellido, decimal ventasBrutas)
+        : this(nombre, apellido, 0.05m, ventasBrutas) // 5% comisión estándar
+    {
+        Console.WriteLine($"Constructor simplificado: comisión estándar del 5%");
+    }
+
     public override decimal CalcularIngresos()
     {
         return TarifaComision * VentasBrutas;
@@ -43,6 +56,11 @@
     {
         return $"Empleado por Comisión: {NombreCompleto} | {TarifaComision:P0} " +
             $"comisión | ${VentasBrutas:N0} en ventas";
+    }
+
+    public decimal CalcularIngresos(decimal bonoAdicional)
+    {
+        return CalcularIngresos() + bonoAdicional;
     }
 }
 
