@@ -15,14 +15,33 @@
         }
     }
 
+    public decimal VentasBrutas
+    {
+        get => _ventasBrutas;
+        private set
+        {
+            if (value < 0)
+                throw new ArgumentOutOfRangeException
+            ("Las ventas brutas no pueden ser negativas");
+            _ventasBrutas = value;
+        }
+    }
+
     public EmpleadoPorComision(string nombre, 
         string apellido, decimal tarifaComision,
         decimal ventasBrutas) : base(nombre, apellido)
     {
+        TarifaComision = tarifaComision;
+        VentasBrutas = ventasBrutas;
     }
 
     public override decimal CalcularIngresos()
     {
-        throw new NotImplementedException();
+        return TarifaComision * VentasBrutas;
+    }
+
+    public override string MostrarInformacion()
+    {
+        return $"Empleado por comisión: {NombreCompleto} | {TarifaComision:P0} comisión | ${VentasBrutas:N0} en ventas\n";
     }
 }
