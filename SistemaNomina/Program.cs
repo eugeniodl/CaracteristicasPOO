@@ -1,7 +1,14 @@
-﻿Empleado[] empleados =
+﻿Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("╔══════════════════════════════════════════════════╗");
+Console.WriteLine("║         Sistema de Nómina - Polimorfismo         ║");
+Console.WriteLine("╚══════════════════════════════════════════════════╝");
+
+Empleado[] empleados =
 {
     new EmpleadoPorHoras("Ana", "López",
         15.5m, 45),
+    new EmpleadoPorHoras("Carlos Ruiz", 30.0m, 50),
+    new EmpleadoPorHoras(60),
     new EmpleadoPorComision("Luis", "Ríos",
         0.10m, 5000m),
     new EmpleadoBaseMasComision(
@@ -9,6 +16,9 @@
     new EmpleadoPorProyecto(
         "Carlos", "García", 0.02m, 3)
 };
+
+Empleado empleado = new EmpleadoPorHoras("Francisco", "Mora", 10.0m, 45);
+Console.WriteLine($"Ingresos: {empleado.CalcularIngresos(25)}");
 
 foreach (Empleado emp in empleados)
 {

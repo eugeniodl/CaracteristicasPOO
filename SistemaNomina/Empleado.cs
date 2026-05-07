@@ -64,5 +64,17 @@ public abstract class Empleado
     {
         return $"Empleado: {NombreCompleto}";
     }
+
+    public virtual decimal CalcularIngresos(decimal factorAjuste)
+    {
+          return CalcularIngresos() * factorAjuste;
+    }
+
+    public virtual string ObtenerInformacion(string formato)
+    {
+        return formato == "detallado" ?
+            $"=== {ObtenerInformacion()} ===" :
+            ObtenerInformacion();
+    }
 }
 
