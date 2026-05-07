@@ -1,16 +1,30 @@
-﻿
-
+﻿Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("╔══════════════════════════════╗");
+Console.WriteLine("║     SISTEMA DE NÓMINA        ║");
+Console.WriteLine("╚══════════════════════════════╝");
+Console.ResetColor();
 
 Empleado[] empleados =
 {
     new EmpleadoPorHoras
     ("Ana", "López", 15.5m, 45),
+    new EmpleadoPorHoras
+    ("Carlos Ruiz", 18.0m, 38),
+    new EmpleadoPorHoras
+    (30),
     new EmpleadoPorComision
     ("Luis", "Ríos", 0.10m, 5000m),
     new EmpleadoBaseMasComision
     ("Marta", "Solís", 0.08m, 8000m,
     1200m)
 };
+Console.ForegroundColor = ConsoleColor.Yellow;
+EmpleadoPorHoras empDemo = new EmpleadoPorHoras
+    ("Pedro", "Martínez", 20.0m, 45);
+
+Console.WriteLine($"Ingreso + 10 horas extras: " +
+    $"${empDemo.CalcularIngresos(10)}");
+Console.ResetColor();
 
 foreach (Empleado emp in empleados)
 {
