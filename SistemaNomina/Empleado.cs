@@ -41,6 +41,17 @@ public abstract class Empleado
         Nombre = nombre;
         Apellido = apellido;
     }
+
+    protected Empleado(string nombreCompleto) : this(
+        nombreCompleto?.Split(' ')[0] ?? "Sin", 
+        nombreCompleto?.Contains(' ') == true ? 
+        nombreCompleto.Substring(nombreCompleto.IndexOf(' ') + 1) : 
+        "Nombre")
+    {
+        Console.WriteLine($"Constructor sobrecargado: " +
+            $"nombre completo procesado");
+    }
+
     /// <summary>
     /// Método abstracto que cada subclase debe implementar obligatoriamente
     /// </summary>
@@ -52,5 +63,16 @@ public abstract class Empleado
     public virtual string ObtenerInformacion()
     {
         return $"Empleado: {NombreCompleto}";
+    }
+
+    public virtual decimal CalcularIngresos(decimal factorAjuste)
+    {
+        return CalcularIngresos() * factorAjuste;
+    }
+
+    public virtual string ObtenerInformacion(string formato)
+    {
+        return formato == "detallado" ? 
+            $"=== {ObtenerInformacion()} ===" : ObtenerInformacion();
     }
 }

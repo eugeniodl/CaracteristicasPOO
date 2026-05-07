@@ -38,6 +38,21 @@
         HorasTrabajadas = horasTrabajadas;
     }
 
+    public EmpleadoPorHoras(string nombreCompleto,
+        decimal sueldoPorHora, int horasTrabajadas) 
+        : base(nombreCompleto)
+    {
+        SueldoPorHora = sueldoPorHora;
+        HorasTrabajadas = horasTrabajadas;
+        Console.WriteLine($"EmpleadoPorHoras creado desde nombre completo");
+    }
+
+    public EmpleadoPorHoras(int horasTrabajadas) : 
+        this("Temporal", "Horas", 10.0m, horasTrabajadas)
+    {
+        Console.WriteLine($"Constructor de emergencia: empleado temporal por horas");
+    }
+
     public override decimal CalcularIngresos()
     {
         const decimal HORAS_NORMALES = 40;
@@ -57,5 +72,12 @@
     {
         return $"Empleado por Horas: {NombreCompleto} | " +
             $"{SueldoPorHora}/hora | {HorasTrabajadas} horas";
+    }
+
+    public decimal CalcularIngresos(int horasExtrasPresupuestadas)
+    {
+        decimal ingresoBase = CalcularIngresos();
+        decimal ingresoExtra = SueldoPorHora * 1.5m * horasExtrasPresupuestadas;
+        return ingresoBase + ingresoExtra;
     }
 }

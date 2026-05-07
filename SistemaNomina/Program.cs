@@ -1,9 +1,14 @@
-﻿
-
+﻿Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("╔════════════════════════════════════════════════════════════╗");
+Console.WriteLine("║                      SISTEMA DE NÓMINA                     ║");
+Console.WriteLine("╚════════════════════════════════════════════════════════════╝");
+Console.ResetColor();
 
 Empleado[] empleados =
 {
     new EmpleadoPorHoras("Ana", "López", 15.5m, 45),
+    new EmpleadoPorHoras("Carlos Ruiz", 18.0m, 38),
+    new EmpleadoPorHoras(30),
     new EmpleadoPorComision("Luis", "Ríos", 0.010m, 5000m),
     new EmpleadoBaseMasComision("Marta", "Solís", 0.08m, 8000m, 1200m)
 };
