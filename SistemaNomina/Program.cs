@@ -13,6 +13,12 @@ Empleado[] empleados =
     new EmpleadoBaseMasComision("Marta", "Solís", 0.08m, 8000m, 1200m)
 };
 
+EmpleadoPorHoras empDemo = new EmpleadoPorHoras("Julio Vargas", 20.0m, 52);
+Console.WriteLine($"Salario + Horas extras presupuestadas" +
+    $" de {empDemo.NombreCompleto} es {empDemo.CalcularIngresos(20)}");
+Console.WriteLine($"Salario de {empDemo.NombreCompleto} es " +
+    $"{empDemo.CalcularIngresos(10.0m)}");
+
 foreach (Empleado e in empleados)
 {
     MostrarIngresos(e);
