@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banco", "Banco\Banco.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaNomina", "SistemaNomina\SistemaNomina.csproj", "{637DA019-9EBE-4A49-AC15-048EF937230A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaProcesamientoPagos", "SistemaProcesamientoPagos\SistemaProcesamientoPagos.csproj", "{1A6EB851-02CA-40F7-8F41-D55579A0782C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{637DA019-9EBE-4A49-AC15-048EF937230A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{637DA019-9EBE-4A49-AC15-048EF937230A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{637DA019-9EBE-4A49-AC15-048EF937230A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A6EB851-02CA-40F7-8F41-D55579A0782C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A6EB851-02CA-40F7-8F41-D55579A0782C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A6EB851-02CA-40F7-8F41-D55579A0782C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A6EB851-02CA-40F7-8F41-D55579A0782C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
