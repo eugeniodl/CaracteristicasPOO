@@ -18,6 +18,9 @@ Empleado[] nomina =
     new EmpleadoBaseMasComision("Marta Solís", 0.08m, 8000m, 1200m)
 };
 
+EmpleadoPorHoras empDemo = new EmpleadoPorHoras("Demo Horas", 20.0m, 40);
+Console.WriteLine($"Demo Horas + Horas extras presupuestadas es {empDemo.CalcularIngresos(20):F2}");
+
 foreach (var empleado in nomina)
 {
     MostrarIngresos(empleado);
