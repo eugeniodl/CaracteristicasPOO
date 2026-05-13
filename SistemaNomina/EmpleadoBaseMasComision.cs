@@ -21,6 +21,20 @@
         SalarioBase = salarioBase;
     }
 
+    public EmpleadoBaseMasComision(string nombreCompleto, decimal tarifaComision,
+        decimal ventasBrutas, decimal salarioBase) 
+        : base(nombreCompleto, tarifaComision, ventasBrutas)
+    {
+        SalarioBase = salarioBase;
+    }
+
+    public EmpleadoBaseMasComision(string nombre, string apellido, decimal ventasBrutas,
+        decimal salarioBase)
+        : base(nombre, apellido, ventasBrutas)
+    {
+        SalarioBase = salarioBase;
+    }
+
     public override decimal CalcularIngresos()
     {
         return base.CalcularIngresos() + SalarioBase;
@@ -31,5 +45,10 @@
         return $"Empleado con salario base más comisión: {NombreCompleto} | " +
                $"{TarifaComision:P0} sobre ${VentasBrutas:N0} | " +
                $"Salario base: ${SalarioBase:N2}\n";
+    }
+
+    public decimal CalcularIngresos(int meses)
+    {
+        return CalcularIngresos() * meses;
     }
 }

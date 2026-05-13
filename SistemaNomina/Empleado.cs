@@ -32,6 +32,16 @@
         Nombre = nombre;
         Apellido = apellido;
     }
+
+    // Sobrecarga: Constructor recibe nombre completo y lo procesa para asignar nombre y apellido
+    protected Empleado(string nombreCompleto) : this
+        (nombreCompleto?.Split(' ')[0] ?? "Sin",
+        nombreCompleto?.Contains(' ') == true ? nombreCompleto.Substring(
+            nombreCompleto.IndexOf(' ') + 1) : "Nombre")
+    {
+        Console.WriteLine($"Constructor sobrecargado: nombre completo procesado");
+    }
+
     /// <summary>
     /// Método abstracto que cada subclase debe implementar obligatoriamente
     /// </summary>
@@ -43,5 +53,19 @@
     public virtual string MostrarInformacion()
     {
         return $"Empleado: {NombreCompleto}";
+    }
+
+    // Método sobrecargado que permite calcular ingresos con un factor de ajuste
+    public virtual decimal CalcularIngresos(decimal factorAjuste)
+    {
+        return CalcularIngresos() * factorAjuste;
+    }
+
+    // Método sobrecargado que muestra información en diferentes formatos
+    public virtual string MostrarInformacion(string formato)
+    {
+        return formato == "detallado" ?
+            $"=== {MostrarInformacion()} ===" :
+            MostrarInformacion();
     }
 }

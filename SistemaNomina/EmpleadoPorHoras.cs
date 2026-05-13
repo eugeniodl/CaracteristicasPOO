@@ -1,17 +1,17 @@
 ﻿public class EmpleadoPorHoras : Empleado
 {
-    private decimal _sueloPorHora;
+    private decimal _sueldoPorHora;
     private int _horasTrabajadas;
 
-    public decimal SueloPorHora
+    public decimal SueldoPorHora
     {
-        get => _sueloPorHora;
+        get => _sueldoPorHora;
         private set
         {
             if (value <= 0)
                 throw new ArgumentException
             ("El sueldo por hora debe ser mayor a 0");
-            _sueloPorHora = value;
+            _sueldoPorHora = value;
         }
     }
 
@@ -35,8 +35,22 @@
         int horasTrabajadas)
         : base(nombre, apellido)
     {
-        SueloPorHora = sueldoPorHora;
+        SueldoPorHora = sueldoPorHora;
         HorasTrabajadas = horasTrabajadas;
+    }
+
+    public EmpleadoPorHoras(string nombreCompleto, decimal sueldoPorHora, int horasTrabajadas)
+        : base(nombreCompleto)
+    {
+        SueldoPorHora = sueldoPorHora;
+        HorasTrabajadas = horasTrabajadas;
+        Console.WriteLine($"-> EmpleadoPorHoras creado desde nombre completo");
+    }
+
+    public EmpleadoPorHoras(int horasTrabajadas) : this
+        ("Temporal", "Horas", 10.0m, horasTrabajadas )
+    {
+        Console.WriteLine($"-> Constructor de emergencia: empleado temporal por horas");
     }
 
     public override decimal CalcularIngresos()
@@ -45,19 +59,26 @@
         const decimal FACTOR_HORAS_EXTRA = 2.0m;
 
         if(HorasTrabajadas <= HORAS_NORMALES)
-            return SueloPorHora * HorasTrabajadas;
+            return SueldoPorHora * HorasTrabajadas;
         else
         {
             decimal horasExtra = HorasTrabajadas - HORAS_NORMALES;
-            return (SueloPorHora * HORAS_NORMALES) + 
-                   (SueloPorHora * FACTOR_HORAS_EXTRA * horasExtra);
+            return (SueldoPorHora * HORAS_NORMALES) + 
+                   (SueldoPorHora * FACTOR_HORAS_EXTRA * horasExtra);
         }
     }
 
     public override string MostrarInformacion()
     {
         return $"Empleado por horas: {NombreCompleto} " +
-            $"| ${SueloPorHora:N2} por hora | " +
+            $"| ${SueldoPorHora:N2} por hora | " +
             $"{HorasTrabajadas} horas trabajadas\n";
+    }
+
+    public decimal CalcularIngresos(int horasExtrasPresupuestadas)
+    {
+        decimal ingresosBase = CalcularIngresos();
+        decimal ingresosExtra = SueldoPorHora * 2.0m * horasExtrasPresupuestadas;
+        return ingresosBase + ingresosExtra;
     }
 }
