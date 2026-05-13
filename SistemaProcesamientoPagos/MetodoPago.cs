@@ -20,7 +20,8 @@
         set
         {
             if (value <= 0)
-                throw new ArgumentException("El monto debe ser mayor a cero");
+                throw new ArgumentException
+                    ("El monto debe ser mayor a cero");
             _montoBase = value;
         }
     }
