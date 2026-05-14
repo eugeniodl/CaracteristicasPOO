@@ -13,13 +13,31 @@
             if(value.Length < 13 || value.Length > 19)
                 throw new ArgumentException
                     ("Número de tarjeta inválido");
-            _numeroTarjeta = value;
+            _numeroTarjeta = EnmascararTarjeta(value);
         }
     }
 
-
     public PagoTarjetaCredito(string moneda, 
-        decimal montoBase) : base(moneda, montoBase)
+        decimal montoBase, string numeroTarjeta) 
+        : base(moneda, montoBase)
     {
+        NumeroTarjeta = numeroTarjeta;
+    }
+
+    public override decimal CalcularComision()
+    {
+        return MontoBase * 0.03m;
+    }
+
+    public override string ObtenerDescripcion()
+    {
+        return $"Tarjeta terminada en {NumeroTarjeta} - Comisión: " +
+            $"{CalcularComision():C}";
+    }
+
+    private string? EnmascararTarjeta(string numero)
+    {
+        if (numero.Length <= 4) return "****";
+        return "****" + numero.Substring(numero.Length - 4);
     }
 }
