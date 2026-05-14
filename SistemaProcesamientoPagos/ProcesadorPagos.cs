@@ -11,6 +11,6 @@
         Console.WriteLine("---------------");
     }
 
-   // public class PagoCriptoHijo : PagoCriptoMoneda { }
+   //public class PagoCriptoHijo : PagoCriptoMoneda { }
 }
 

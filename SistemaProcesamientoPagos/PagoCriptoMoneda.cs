@@ -10,8 +10,8 @@
             if (string.IsNullOrWhiteSpace(value))
                 throw new ArgumentException
                 ("La dirección de wallet es requerida");
-            if (!value.StartsWith("0x") ||
-                !value.StartsWith("bc1") ||
+            if (!value.StartsWith("0x") &&
+                !value.StartsWith("bc1") &&
                 !value.StartsWith("1"))
                 throw new ArgumentException
                     ("Formato de wallet inválido");
